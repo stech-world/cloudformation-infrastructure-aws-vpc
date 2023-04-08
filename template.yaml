@@ -41,7 +41,7 @@ Resources:
       CidrBlock: 10.0.101.0/24
       MapPublicIpOnLaunch: true
       VpcId: !Ref STWVpc
-      AvailabilityZone: "eu-west-1a"
+      AvailabilityZone: !Sub "${AWS::Region}a"
       Tags:
         - Key: Name
           Value: STW
@@ -52,7 +52,7 @@ Resources:
       CidrBlock: 10.0.102.0/24
       MapPublicIpOnLaunch: true
       VpcId: !Ref STWVpc
-      AvailabilityZone: "eu-west-1b"
+      AvailabilityZone: !Sub "${AWS::Region}b"
       Tags:
         - Key: Name
           Value: STW
@@ -63,7 +63,7 @@ Resources:
       CidrBlock: 10.0.1.0/24
       MapPublicIpOnLaunch: false
       VpcId: !Ref STWVpc
-      AvailabilityZone: "eu-west-1a"
+      AvailabilityZone: !Sub "${AWS::Region}a"
       Tags:
         - Key: Name
           Value: STW
@@ -74,7 +74,7 @@ Resources:
       CidrBlock: 10.0.2.0/24
       MapPublicIpOnLaunch: false
       VpcId: !Ref STWVpc
-      AvailabilityZone: "eu-west-1b"
+      AvailabilityZone: !Sub "${AWS::Region}b"
       Tags:
         - Key: Name
           Value: STW
